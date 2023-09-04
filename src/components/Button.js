@@ -1,20 +1,10 @@
-import PropTypes from 'prop-types'
-
-const Button = ({ color, text, onClick }) => {
-
-
-    return (
-        <button onClick={onClick} className='btn' style={{ backgroundColor: color }}>{text}</button>
-    )
-}
-Button.defaltProps = {
-    color: 'steelblue',
-
-}
-
-Button.propTypes = {
-    text: PropTypes.string,
-    color: PropTypes.string,
-    onClick: PropTypes.func,
-}
-export default Button;
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(require("react"));
+const Button = ({ color = 'steelblue', text, onClick }) => {
+    return (react_1.default.createElement("button", { onClick: onClick, className: 'btn', style: { backgroundColor: color } }, text));
+};
+exports.default = Button;
